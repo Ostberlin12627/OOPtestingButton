@@ -31,31 +31,46 @@ public class Button {
         }
 
         public void setText(){
-            this.text = text;
+            this.text = this.text;
             back.setText(text);
         }
 
         public void setkoords(){
-            this.x = x;
-            this.y =y;
+            this.x = this.x;
+            this.y =this.y;
             back.setBounds(x,y,width,height);
         }
 
         public void setgroesse(){
-            this.width = width;
-            this.height = height;
+            this.width = this.width;
+            this.height = this.height;
             back.setBounds(x, y, width, height);
         }
 
         public void sethintergrund(Color bColor) {
-            this.bColor = bColor;
+            this.bColor = this.bColor;
             back.setBackground(bColor);
         }
 
         public void setSchriftfarbe(Color fColor) {
-            this.fColor = fColor;
+            this.fColor = this.fColor;
             back.setForeground(fColor);
         }
 
+        public JButton getButton() {
+            return back;
+        }
+    public Button() {
+        erstelleButton();
+    }
+    public void erstelleButton(){
+        back = new JButton();
+        back.setText(text);
+        back.setBounds(x,y,width,height);
+        back.setBackground(bColor);
+        back.setForeground(fColor);
+        back.setFocusable(focu);
+        back.setFont(font);
+    }
 }
 
